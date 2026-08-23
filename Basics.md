@@ -166,3 +166,164 @@ int main()
 int age = 18;
 age = 19;       // Value changed
 ```
+# 📄04:Data Types-
+### 📌 Theory
+
+-A data type specifies what kind of data a variable can store and how much memory is generally required to store it.
+
+-C++ has several built-in data types.
+
+🔹 Common C++ Data Types
+
+| Data Type | Used for | Example |
+|---|---|---|
+| `int` | Whole numbers | `10` |
+| `float` | Decimal numbers | `10.5f` |
+| `double` | More precise decimal numbers | `10.5678` |
+| `char` | Single character | `'A'` |
+| `bool` | True/false values | `true` |
+| `void` | No value | `void function()` |
+
+🔹 **Syntax**
+
+```cpp
+data_type variable_name = value;
+```
+-Example:
+```cpp
+int age = 19;
+💻 Example
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int age = 19;              // Stores whole numbers
+    float height = 5.8f;       // Stores decimal numbers
+    double price = 99.9999;    // Stores decimal numbers with higher precision
+    char grade = 'A';          // Stores a single character
+    bool passed = true;        // Stores true or false
+
+    cout << "Age: " << age << endl;
+    cout << "Height: " << height << endl;
+    cout << "Price: " << price << endl;
+    cout << "Grade: " << grade << endl;
+    cout << "Passed: " << passed << endl;
+
+    return 0;
+}
+```
+```cpp
+Output
+Age: 19
+Height: 5.8
+Price: 99.9999
+Grade: A
+Passed: 1
+```
+*By default, C++ prints:
+
+-true  → 1
+-false → 0
+
+🔹 Character Data Type
+
+-char stores one character.
+
+-char letter = 'A';
+
+-Characters are written using single quotes.
+
+-char a = 'A';      // Correct
+-char a = "A";      // Not correct for a single char
+🔹 Boolean Data Type
+
+*bool stores only two possible values:
+
+-true
+-false
+
+-Example:
+```cpp
+bool isStudent = true;
+bool isWorking = false;
+```
+🔹 sizeof() Operator
+
+-The sizeof() operator is used to determine the amount of memory occupied by a data type or variable.
+```cpp
+Syntax
+sizeof(variable);
+Example
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int a = 10;
+    float b = 10.5f;
+    double c = 20.55;
+    char d = 'A';
+    bool e = true;
+
+    cout << "Size of int: " << sizeof(a) << " bytes" << endl;
+    cout << "Size of float: " << sizeof(b) << " bytes" << endl;
+    cout << "Size of double: " << sizeof(c) << " bytes" << endl;
+    cout << "Size of char: " << sizeof(d) << " bytes" << endl;
+    cout << "Size of bool: " << sizeof(e) << " bytes" << endl;
+
+    return 0;
+}
+```
+-The exact size of some types can depend on the compiler and platform, although common modern systems typically use:
+```cpp
+int       → 4 bytes
+float     → 4 bytes
+double    → 8 bytes
+char      → 1 byte
+bool      → 1 byte
+```
+📝 Important Points
+
+-int → whole numbers.
+-float → decimal numbers with single precision.
+-double → decimal numbers with higher precision than float.
+-char → one character.
+-bool → true or false.
+-sizeof() → determines the memory size of a type or variable.
+-char values use single quotes.
+-C++ is strongly typed, so every variable has a specific type.
+
+🔹 Basic Classification
+
+C++ Data Types
+│
+├── Fundamental
+│   ├── int
+│   ├── float
+│   ├── double
+│   ├── char
+│   ├── bool
+│   └── void
+│
+├── Derived
+│   ├── Array
+│   ├── Pointer
+│   ├── Reference
+│   └── Function
+│
+└── User-defined
+    ├── class
+    ├── struct
+    ├── union
+    └── enum
+    
+🎯 Summary
+```cpp
+int       → 10
+float     → 10.5f
+double    → 10.5555
+char      → 'A'
+bool      → true / false
+void      → no value
+```
