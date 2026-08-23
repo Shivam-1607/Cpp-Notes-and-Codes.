@@ -235,15 +235,18 @@ Passed: 1
 -Characters are written using single quotes.
 
 -char a = 'A';      // Correct
+
 -char a = "A";      // Not correct for a single char
 🔹 Boolean Data Type
 
 *bool stores only two possible values:
 
 -true
+
 -false
 
 -Example:
+
 ```cpp
 bool isStudent = true;
 bool isWorking = false;
@@ -251,6 +254,7 @@ bool isWorking = false;
 🔹 sizeof() Operator
 
 -The sizeof() operator is used to determine the amount of memory occupied by a data type or variable.
+
 ```cpp
 Syntax
 sizeof(variable);
@@ -276,6 +280,7 @@ int main()
 }
 ```
 -The exact size of some types can depend on the compiler and platform, although common modern systems typically use:
+
 ```cpp
 int       → 4 bytes
 float     → 4 bytes
@@ -286,13 +291,21 @@ bool      → 1 byte
 📝 Important Points
 
 -int → whole numbers.
+
 -float → decimal numbers with single precision.
+
 -double → decimal numbers with higher precision than float.
+
 -char → one character.
+
 -bool → true or false.
+
 -sizeof() → determines the memory size of a type or variable.
+
 -char values use single quotes.
--C++ is strongly typed, so every variable has a specific type.
+
+-C++ is strongly typed, so every variable has a specific type
+
 
 🔹 Basic Classification
 
