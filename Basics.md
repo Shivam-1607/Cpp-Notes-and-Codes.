@@ -4,7 +4,7 @@
 
 ```cpp
 #include <iostream>      // Provides input/output functionality
-using namespace std;     // Allows us to use cout without writing std::cout
+using namespace std;     // Allows us to use cout without writing std::cout 
 
 int main()               // Program execution starts from main()
 {
@@ -334,7 +334,8 @@ C++ Data Types
     ├── struct
     ├── union
     └── enum
-   ``` 
+   ```
+
 🎯 Summary
 ```cpp
 int       → 10
