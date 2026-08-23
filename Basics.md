@@ -189,7 +189,7 @@ age = 19;       // Value changed
 ```cpp
 data_type variable_name = value;
 ```
--Example:
+🔹Example:
 ```cpp
 int age = 19;
 💻 Example
@@ -237,15 +237,16 @@ Passed: 1
 -char a = 'A';      // Correct
 
 -char a = "A";      // Not correct for a single char
+
 🔹 Boolean Data Type
 
-*bool stores only two possible values:
+-bool stores only two possible values:
 
 -true
 
 -false
 
--Example:
+🔹Example:
 
 ```cpp
 bool isStudent = true;
@@ -309,6 +310,9 @@ bool      → 1 byte
 
 🔹 Basic Classification
 
+### C++ Data Types
+
+```text
 C++ Data Types
 │
 ├── Fundamental
@@ -330,7 +334,7 @@ C++ Data Types
     ├── struct
     ├── union
     └── enum
-    
+   ``` 
 🎯 Summary
 ```cpp
 int       → 10
