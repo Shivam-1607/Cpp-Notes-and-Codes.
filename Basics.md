@@ -345,3 +345,130 @@ char      → 'A'
 bool      → true / false
 void      → no value
 ```
+ 
+📄05: Constants-
+
+📌 Theory
+
+-A constant is a value that cannot be changed after it has been defined.
+
+-In C++, the const keyword is used to make a variable constant.
+
+-Once a value is assigned to a const variable, trying to change it will produce a compilation error.
+
+🔹 Syntax
+```cpp
+const data_type variable_name = value;
+```
+*Example:
+```cpp
+const int MAX_SCORE = 100;
+```
+💻 Example
+```cpp
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    const int MAX_MARKS = 100;   // Constant value
+
+    cout << "Maximum marks: " << MAX_MARKS << endl;
+
+    // MAX_MARKS = 200;
+    // Error: cannot modify a const variable
+
+    return 0;
+}
+Output
+Maximum marks: 100
+```
+🔹 Constants with Different Data Types
+```cpp
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    const int age = 19;            // Constant integer
+    const float pi = 3.14f;        // Constant float
+    const char grade = 'A';        // Constant character
+    const double gravity = 9.81;   // Constant double
+
+    cout << age << endl;
+    cout << pi << endl;
+    cout << grade << endl;
+    cout << gravity << endl;
+
+    return 0;
+}
+```
+🔹 Normal Variable vs Constant
+```text
+-Normal variable
+int age = 19;
+
+age = 20;    // Allowed
+-Constant variable
+const int age = 19;
+
+age = 20;    // Error
+```
+-The difference is:
+
+-Normal variable → value can be changed
+
+-Constant        → value cannot be changed
+
+🔹 Constants for Fixed Values
+
+-Constants are useful when a value should remain fixed throughout a program.
+```cpp
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    const double PI = 3.14159;
+    double radius = 5;
+
+    double area = PI * radius * radius;
+
+    cout << "Area: " << area << endl;
+
+    return 0;
+}
+```
+
+-Here, PI should not be changed because its value is fixed.
+
+📝 Important Points
+
+-Use const to create a constant variable.
+
+-A constant must normally be initialized when declared.
+
+-Its value cannot be modified after initialization.
+
+-Constants improve code safety and readability.
+
+-Constant names are often written in uppercase by convention.
+
+🔹 Example
+```cpp
+const int MAX_USERS = 100;
+const double PI = 3.14159;
+const int DAYS_IN_WEEK = 7;
+```
+🎯 Summary
+
+const
+  ↓
+Makes a variable read-only
+  ↓
+Value cannot be changed
+
+-Basic syntax:
+```cpp
+const data_type variable_name = value;
+```
