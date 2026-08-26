@@ -12,7 +12,7 @@ int main()               // Program execution starts from main()
     return 0;             // Indicates that the program ended successfully
 }
 ``` 
- 
+
  ### 📌 Theory
 
 A basic C++ program consists of:
