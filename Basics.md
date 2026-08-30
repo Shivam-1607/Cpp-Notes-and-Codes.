@@ -472,7 +472,7 @@ Value cannot be changed
 ```cpp
 const data_type variable_name = value;
 ```
-## 📄07: Operators in C++:-
+## 📄06: Operators in C++:-
 
 ### 📌 Theory
 
@@ -640,7 +640,7 @@ int main()
 | Operator | Name         | Meaning                         |
 |----------|--------------|---------------------------------|
 | `&&`     | Logical AND  | Both conditions must be true    |
-| `||`     | Logical OR   | At least one condition is true  |
+| `┆┆`     | Logical OR   | At least one condition is true  |
 | `!`      | Logical NOT  | Reverses the result             |
 
 ### 💻 Example-
@@ -733,7 +733,7 @@ int main()
 | Operator | Name          |
 |----------|---------------|
 | `&`      | Bitwise AND   |
-| `|`      | Bitwise OR    |
+| `┆`      | Bitwise OR    |
 | `^`      | Bitwise XOR   |
 | `~`      | Bitwise NOT   |
 | `<<`     | Left Shift    |
@@ -824,7 +824,7 @@ int result = (2 + 3) * 4;
 | `+ - * / %`            | Arithmetic                |
 | `= += -= *= /= %=`     | Assignment                |
 | `== != > < >= <=`      | Relational                |
-| `&& || !`              | Logical                   |
+| `&& ┆┆ !`              | Logical                   |
 | `++ --`                | Increment / Decrement     |
-| `& | ^ ~ << >>`        | Bitwise                   |
+| `& ┆ ^ ~ << >>`        | Bitwise                   |
 | `? :`                  | Conditional (Ternary)     |
