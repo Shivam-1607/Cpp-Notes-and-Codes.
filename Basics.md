@@ -166,7 +166,7 @@ int main()
 int age = 18;
 age = 19;       // Value changed
 ```
-# 📄04:Data Types-
+## 📄04:Data Types-
 ### 📌 Theory
 
 -A data type specifies what kind of data a variable can store and how much memory is generally required to store it.
@@ -289,7 +289,7 @@ double    → 8 bytes
 char      → 1 byte
 bool      → 1 byte
 ```
-📝 Important Points
+### 📝 Important Points
 
 -int → whole numbers.
 
@@ -336,7 +336,7 @@ C++ Data Types
     └── enum
    ```
 
-🎯 Summary
+### 🎯 Summary
 ```cpp
 int       → 10
 float     → 10.5f
@@ -346,9 +346,9 @@ bool      → true / false
 void      → no value
 ```
  
-📄05: Constants-
+## 📄05: Constants-
 
-📌 Theory
+### 📌 Theory
 
 -A constant is a value that cannot be changed after it has been defined.
 
@@ -364,7 +364,7 @@ const data_type variable_name = value;
 ```cpp
 const int MAX_SCORE = 100;
 ```
-💻 Example
+### 💻 Example
 ```cpp
 #include <iostream>
 using namespace std;
@@ -442,7 +442,7 @@ int main()
 
 -Here, PI should not be changed because its value is fixed.
 
-📝 Important Points
+### 📝 Important Points
 
 -Use const to create a constant variable.
 
@@ -460,7 +460,7 @@ const int MAX_USERS = 100;
 const double PI = 3.14159;
 const int DAYS_IN_WEEK = 7;
 ```
-🎯 Summary
+### 🎯 Summary
 
 const
   ↓
@@ -472,3 +472,359 @@ Value cannot be changed
 ```cpp
 const data_type variable_name = value;
 ```
+## 📄07: Operators in C++:-
+
+### 📌 Theory
+
+-Operators are symbols used to perform operations on values and variables.
+
+-For example:
+```
+a + b
+```
+
+-Here, + is an operator that performs addition.
+
+-C++ provides several types of operators.
+
+🔹 Types of Operators-
+
+Operators
+│
+├── Arithmetic Operators
+├── Assignment Operators
+├── Relational Operators
+├── Logical Operators
+├── Increment / Decrement Operators
+├── Bitwise Operators
+└── Conditional Operator
+
+### 1.➕ Arithmetic Operators:-
+
+-Arithmetic operators are used to perform mathematical operations.
+
+| Operator | Operation       | Example |
+|----------|-----------------|---------|
+| `+`      | Addition        | `a + b` |
+| `-`      | Subtraction     | `a - b` |
+| `*`      | Multiplication  | `a * b` |
+| `/`      | Division        | `a / b` |
+| `%`      | Modulus         | `a % b` |
+
+### 💻 Example-`
+```cpp
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int a = 10;
+    int b = 3;
+
+    cout << "Addition: " << a + b << endl;
+    cout << "Subtraction: " << a - b << endl;
+    cout << "Multiplication: " << a * b << endl;
+    cout << "Division: " << a / b << endl;
+    cout << "Remainder: " << a % b << endl;
+
+    return 0;
+}
+```
+-Output:
+ ```
+Addition: 13
+Subtraction: 7
+Multiplication: 30
+Division: 3
+Remainder: 1
+```
+
+### ⚠️ Integer Division
+
+-When both operands are integers, / performs integer division.
+```
+int a = 5;
+int b = 2;
+
+cout << a / b;
+```
+-Output:
+```
+2
+```
+-The decimal part is discarded.
+
+### 2.📝 Assignment Operators-
+
+-Assignment operators are used to assign or update values.
+
+| Operator | Example   | Equivalent to |
+|----------|-----------|---------------|
+| `=`      | `a = 5`   | `a = 5`       |
+| `+=`     | `a += 5`  | `a = a + 5`   |
+| `-=`     | `a -= 5`  | `a = a - 5`   |
+| `*=`     | `a *= 5`  | `a = a * 5`   |
+| `/=`     | `a /= 5`  | `a = a / 5`   |
+| `%=`     | `a %= 5`  | `a = a % 5`   |
+
+### 💻 Example-
+```
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int a = 10;
+
+    a += 5;    // a = a + 5
+    cout << a << endl;
+
+    a -= 3;    // a = a - 3
+    cout << a << endl;
+
+    a *= 2;    // a = a * 2
+    cout << a << endl;
+
+    a /= 4;    // a = a / 4
+    cout << a << endl;
+
+    return 0;
+}
+```
+
+### 3.⚖️ Relational Operators-
+
+-Relational operators compare two values.
+
+-The result is a Boolean value:
+```
+true  → 1
+false → 0
+```
+
+| Operator | Meaning                     |
+|----------|-----------------------------|
+| `==`     | Equal to                    |
+| `!=`     | Not equal to                |
+| `>`      | Greater than                |
+| `<`      | Less than                   |
+| `>=`     | Greater than or equal to    |
+| `<=`     | Less than or equal to       |
+
+### 💻 Example-
+```cpp
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int a = 10;
+    int b = 20;
+
+    cout << (a == b) << endl;   // Checks whether a equals b
+    cout << (a != b) << endl;   // Checks whether a is not equal to b
+    cout << (a < b) << endl;    // Checks whether a is less than b
+    cout << (a > b) << endl;    // Checks whether a is greater than b
+    cout << (a <= b) << endl;   // Checks whether a is less than or equal to b
+    cout << (a >= b) << endl;   // Checks whether a is greater than or equal to b
+
+    return 0;
+}
+````
+
+### 4. 🧠 Logical Operators-
+
+-Logical operators are used to combine or modify conditions.
+
+| Operator | Name         | Meaning                         |
+|----------|--------------|---------------------------------|
+| `&&`     | Logical AND  | Both conditions must be true    |
+| `||`     | Logical OR   | At least one condition is true  |
+| `!`      | Logical NOT  | Reverses the result             |
+
+### 💻 Example-
+```cpp
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int age = 20;
+    bool hasID = true;
+
+    // Both conditions must be true
+    cout << (age >= 18 && hasID) << endl;
+
+    // At least one condition must be true
+    cout << (age >= 18 || hasID) << endl;
+
+    // Reverses true to false or false to true
+    cout << !hasID << endl;
+
+    return 0;
+}
+```
+
+### 5. 🔼 Increment and Decrement Operators-
+
+-These operators increase or decrease a variable by 1.
+
+| Operator | Operation       |
+|----------|-----------------|
+| `++`     | Increment by 1  |
+| `--`     | Decrement by 1  |
+
+### 💻 Example-
+```cpp
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int a = 5;
+
+    a++;    // Increases a by 1
+    cout << a << endl;    // 6
+
+    a--;    // Decreases a by 1
+    cout << a << endl;    // 5
+
+    return 0;
+}
+```
+🔹 Prefix and Postfix
+
+-Increment and decrement operators can be used before or after a variable.
+```
+Prefix
+++a;
+```
+-The value is changed before it is used in the expression.
+```
+Postfix
+a++;
+```
+-The original value is used first, then the variable is incremented.
+
+*Example-
+```cpp
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int a = 5;
+
+    cout << ++a << endl;   // Increment first, then print → 6
+
+    a = 5;
+
+    cout << a++ << endl;   // Print first, then increment → 5
+    cout << a << endl;     // a is now 6
+
+    return 0;
+}
+```
+### 6. 💻 Bitwise Operators-
+
+-Bitwise operators work directly with the individual bits of integer values.
+
+| Operator | Name          |
+|----------|---------------|
+| `&`      | Bitwise AND   |
+| `|`      | Bitwise OR    |
+| `^`      | Bitwise XOR   |
+| `~`      | Bitwise NOT   |
+| `<<`     | Left Shift    |
+| `>>`     | Right Shift   |
+
+### 💻 Example-
+```cpp
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int a = 5;    // Binary: 0101
+    int b = 3;    // Binary: 0011
+
+    cout << (a & b) << endl;   // Bitwise AND
+    cout << (a | b) << endl;   // Bitwise OR
+    cout << (a ^ b) << endl;   // Bitwise XOR
+
+    return 0;
+}
+```
+
+-Bitwise operators become particularly important when studying low-level programming, systems, embedded programming, and computer architecture.
+
+### 7.❓ Conditional / Ternary Operator-
+
+-The conditional operator is a short way of writing a simple if-else expression.
+
+🔹 Syntax
+```
+condition ? expression1 : expression2;
+```
+-If the condition is true, expression1 is selected. Otherwise, expression2 is selected.
+
+### 💻 Example:
+```cpp
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int age = 20;
+
+    // If age >= 18, result becomes "Adult"
+    // Otherwise, result becomes "Minor"
+    string result = (age >= 18) ? "Adult" : "Minor";
+
+    cout << result;
+
+    return 0;
+}
+```
+-Output:
+```
+Adult
+```
+### 📝 Operator Precedence-
+
+-When an expression contains multiple operators, C++ follows operator precedence to determine the order of evaluation.
+
+-For example:
+```
+int result = 2 + 3 * 4;
+```
+-Multiplication is performed before addition:
+```
+3 * 4 = 12
+2 + 12 = 14
+```
+-Therefore:
+```
+result = 14
+```
+-Parentheses can be used to explicitly control the order:
+```
+int result = (2 + 3) * 4;
+```
+-Now:
+```
+2 + 3 = 5
+5 * 4 = 20
+```
+### 🎯 Summary-
+
+| Operators              | Category                  |
+|------------------------|---------------------------|
+| `+ - * / %`            | Arithmetic                |
+| `= += -= *= /= %=`     | Assignment                |
+| `== != > < >= <=`      | Relational                |
+| `&& || !`              | Logical                   |
+| `++ --`                | Increment / Decrement     |
+| `& | ^ ~ << >>`        | Bitwise                   |
+| `? :`                  | Conditional (Ternary)     |
