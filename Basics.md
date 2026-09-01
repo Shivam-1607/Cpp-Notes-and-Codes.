@@ -828,3 +828,326 @@ int result = (2 + 3) * 4;
 | `++ --`                | Increment / Decrement     |
 | `& ┆ ^ ~ << >>`        | Bitwise                   |
 | `? :`                  | Conditional (Ternary)     |
+
+## 📄07:Input and Output-
+
+###📌 Theory
+
+-Input and output are used to communicate with the user.
+
+-C++ mainly uses:
+
+-cout → displays output
+
+-cin → takes input
+
+-endl → moves to a new line
+
+-\n → newline character
+
+-The <iostream> header provides these standard input/output features.
+
+🔹 Output Using cout-
+
+*Syntax-
+```cpp
+cout << value;
+Example
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    cout << "Hello World";        // Displays text
+    cout << 100;                  // Displays a number
+
+    return 0;
+}
+```
+-Output:
+```
+Hello World100
+```
+🔹 Printing Multiple Values-
+
+-The << operator can be used multiple times in the same statement.
+```cpp
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int age = 19;
+    string name = "Shivam";
+
+    cout << "Name: " << name << endl;
+    cout << "Age: " << age << endl;
+
+    return 0;
+}
+```
+*Output-
+```
+Name: Shivam
+Age: 19
+```
+🔹 New Line Using endl
+
+-endl moves the cursor to the next line.
+```cpp
+cout << "Hello" << endl;
+cout << "World";
+```
+-Output:
+```
+Hello
+World
+```
+🔹 New Line Using \n
+
+-\n is an escape sequence that represents a new line.
+```cpp
+cout << "Hello\n";
+cout << "World";
+```
+-Output:
+```
+Hello
+World
+```
+-For simple new lines, \n is generally preferred over endl because endl also flushes the output buffer.
+
+🔹 Input Using cin
+
+-cin is used to take input from the user.
+
+Syntax-
+```
+cin >> variable;
+```
+*Example
+```cpp
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int age;
+
+    cout << "Enter your age: ";
+    cin >> age;                   // Takes an integer from the user
+
+    cout << "Your age is: " << age;
+
+    return 0;
+}
+```
+
+-If the user enters:
+```
+19
+```
+Output:
+```
+Your age is: 19
+```
+
+🔹 Taking Multiple Inputs-
+
+-Multiple values can be taken using multiple >> operators.
+```cpp
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int a, b;
+
+    cout << "Enter two numbers: ";
+    cin >> a >> b;
+
+    cout << "First number: " << a << endl;
+    cout << "Second number: " << b << endl;
+
+    return 0;
+}
+```
+
+-If the input is:
+```
+10 20
+```
+-Output:
+```
+First number: 10
+Second number: 20
+
+The values can also be entered on separate lines:
+
+10
+20
+```
+🔹 Input with Different Data Types-
+```cpp
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int age;
+    float height;
+    char grade;
+
+    cout << "Enter age: ";
+    cin >> age;
+
+    cout << "Enter height: ";
+    cin >> height;
+
+    cout << "Enter grade: ";
+    cin >> grade;
+
+    cout << "\nAge: " << age << endl;
+    cout << "Height: " << height << endl;
+    cout << "Grade: " << grade << endl;
+
+    return 0;
+}
+```
+🔹 Character Input-
+
+-cin can also take a single character.
+```
+char grade;
+
+cin >> grade;
+```
+-If the user enters:
+```
+A
+```
+-then grade stores:
+```
+'A'
+```
+🔹 String Input
+
+-For a single word:
+```cpp
+string name;
+
+cin >> name;
+```
+-However, cin >> stops reading when it encounters whitespace.
+
+-For example:
+```
+Shivam Chatur
+```
+-will store only:
+```
+Shivam
+```
+-To read an entire line, use getline().
+
+```cpp
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main()
+{
+    string name;
+
+    cout << "Enter your full name: ";
+    getline(cin, name);            // Reads the complete line
+
+    cout << "Name: " << name;
+
+    return 0;
+}
+```
+🔹 cout and cin Operators-
+
+Output-
+```
+cout << value;
+```
+-<< is called the insertion operator when used with cout.
+
+Input:
+```
+cin >> variable;
+```
+->> is called the extraction operator when used with cin.
+```
+cout << data
+      ↓
+   Output
+
+cin >> variable
+      ↓
+    Input
+```
+🔹 Basic Input/Output Program-
+```cpp
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main()
+{
+    string name;
+    int age;
+    float marks;
+
+    cout << "Enter your name: ";
+    getline(cin, name);
+
+    cout << "Enter your age: ";
+    cin >> age;
+
+    cout << "Enter your marks: ";
+    cin >> marks;
+
+    cout << "\n----- Student Details -----\n";
+    cout << "Name: " << name << endl;
+    cout << "Age: " << age << endl;
+    cout << "Marks: " << marks << endl;
+
+    return 0;
+}
+```
+### 📝 Important Points-
+
+-cout is used for output.
+
+-cin is used for input.
+
+-<< is used with cout.
+
+->> is used with cin.
+
+-endl moves to a new line and flushes the output buffer.
+
+-\n represents a new line.
+
+-cin >> string reads only one word.
+
+-getline() reads an entire line.
+
+-<iostream> provides cin, cout, and related I/O functionality.
+
+-<string> provides the string type and related functionality.
+
+🎯 Summary-
+
+| Keyword / Function | Meaning |
+|--------------------|---------|
+| `cout`             | Output |
+| `cin`              | Input |
+| `<<`               | Output / Insertion operator |
+| `>>`               | Input / Extraction operator |
+| `endl`             | New line + flush |
+| `\n`               | New line |
+| `getline()`        | Read an entire line |
