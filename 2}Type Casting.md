@@ -250,29 +250,19 @@ int main()
 
 ### 🎯 Summary:
 
-Type Casting
-     │
-     ▼
-┌─────────────┐
-│ Type Casting│
-└──────┬──────┘
-       │
-       ▼
-   ┌─────────┐
-   │  Types  │
-   └────┬────┘
-        │
-   ┌────┴─────┐
-   ▼          ▼
-Implicit    Explicit
-   │            │
-   ▼            ▼
-Automatic    Manual
-Conversion   Conversion
-                │
-          ┌─────┴─────┐
-          ▼           ▼
-     (int)value   static_cast<int>
+                    ┌──────────────┐
+                    │ Type Casting │
+                    └──────┬───────┘
+                           │
+                 ┌─────────┴─────────┐
+                 ▼                   ▼
+          ┌────────────┐      ┌────────────┐
+          │  Implicit  │      │  Explicit  │
+          └─────┬──────┘      └─────┬──────┘
+                │                   │
+                ▼             ┌─────┴─────┐
+     Automatic Conversion     ▼           ▼
+                          (int)value  static_cast<int>(value)
     
 *Common syntax-
 ```
