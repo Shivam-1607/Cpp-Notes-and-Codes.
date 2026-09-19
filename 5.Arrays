@@ -1,0 +1,215 @@
+# 📄24.Arrays Basics-
+
+## 📌 Theory-
+
+-An **array** is a collection of multiple values of the **same data type** stored under one variable name.
+
+-Instead of creating separate variables:
+
+```cpp
+int marks1 = 80;
+int marks2 = 75;
+int marks3 = 90;
+```
+
+-We can use an array:
+
+```cpp
+int marks[3] = {80, 75, 90};
+```
+
+-Each value in an array is accessed using an **index**.
+
+## 🔹 Syntax
+
+```cpp
+data_type array_name[size];
+```
+
+-Example:
+
+```cpp
+int numbers[5];
+```
+
+-This creates an integer array that can store **5 integers**.
+
+## 🔹 Array Index
+
+-C++ arrays use **zero-based indexing**.
+
+-For an array of 5 elements:
+
+```text
+Index:     0    1    2    3    4
+          ┌────┬────┬────┬────┬────┐
+Array:    │ 10 │ 20 │ 30 │ 40 │ 50 │
+          └────┴────┴────┴────┴────┘
+```
+
+-The first element is at index `0`, and the last element is at index `size - 1`.
+
+## 💻 Creating and Initializing an Array
+
+```cpp
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    // Create an integer array containing 5 values
+    int numbers[5] = {10, 20, 30, 40, 50};
+
+    // Access the first element using index 0
+    cout << numbers[0] << endl;
+
+    // Access the third element using index 2
+    cout << numbers[2] << endl;
+
+    // Access the last element using index 4
+    cout << numbers[4] << endl;
+
+    return 0;
+}
+```
+
+### Output-
+
+```text
+10
+30
+50
+```
+
+## 🔹 Changing an Array Element
+
+-Array elements can be modified using their index.
+
+```cpp
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int numbers[3] = {10, 20, 30};
+
+    // Change the value at index 1
+    numbers[1] = 100;
+
+    cout << numbers[0] << endl;
+    cout << numbers[1] << endl;
+    cout << numbers[2] << endl;
+
+    return 0;
+}
+```
+
+### Output
+
+```text
+10
+100
+30
+```
+
+## 🔹 Array with a `for` Loop
+
+-Arrays are commonly used with loops to process multiple elements.
+
+```cpp
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int numbers[5] = {10, 20, 30, 40, 50};
+
+    // Start from index 0 and continue until index 4
+    for (int i = 0; i < 5; i++)
+    {
+        // Print the element at the current index
+        cout << numbers[i] << endl;
+    }
+
+    return 0;
+}
+```
+
+### Output
+
+```text
+10
+20
+30
+40
+50
+```
+
+## 🔹 Taking Array Size from Initialization
+
+-When values are provided during initialization, the size can be omitted.
+
+```cpp
+int numbers[] = {10, 20, 30, 40};
+```
+
+-C++ automatically determines the size as `4`.
+
+## 🔹 Different Data Types-
+
+-Arrays can contain different types of data, but all elements within one array must have the same type.
+
+### Integer Array-
+
+```cpp
+int numbers[3] = {10, 20, 30};
+```
+
+### Double Array-
+
+```cpp
+double prices[3] = {10.5, 20.5, 30.5};
+```
+
+### Character Array-
+
+```cpp
+char letters[3] = {'A', 'B', 'C'};
+```
+
+## 📝 Important Points-
+
+- An array stores multiple values of the same data type.
+
+- Array indexing starts from `0`.
+
+- The last index is `size - 1`.
+
+- Arrays have a fixed size when declared as built-in C++ arrays.
+
+- Elements are accessed using `array_name[index]`.
+
+- Arrays work very well with loops.
+
+- Accessing an index outside the valid range can cause undefined behavior.
+
+## 🎯 Summary-
+
+```text
+              Array
+                │
+        ┌───────┴───────┐
+        ↓               ↓
+ Same Data Type     Multiple Values
+        │
+        ↓
+ Index starts at 0
+        │
+        ↓
+ 0 → First Element
+ 1 → Second Element
+ 2 → Third Element
+        │
+        ↓
+ size - 1 → Last Element
+```
